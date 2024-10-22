@@ -22,11 +22,11 @@ def hello_name(name):
    return "Hello " + name
 
 @app.route("/attraction", methods=["GET"])
-def list_todo():
+def list_attractions():
    return jsonify(AttractionService().list())
 
 @app.route("/attraction", methods=["POST"])
-def create_todo():
+def create_attraction():
    return jsonify(AttractionService().create(request.get_json()))
 
 @app.route("/attraction/<item_id>", methods=["PUT"])
